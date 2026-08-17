@@ -18,22 +18,18 @@
 
 ## 📌 Project Overview
 
-This project performs **Exploratory Data Analysis (EDA)** on a Zomato restaurant dataset using Python. The analysis explores restaurant categories, customer voting patterns, ratings, online/offline ordering behavior, and approximate spending.
+This project performs **Exploratory Data Analysis (EDA)** on a Zomato restaurant dataset using Python. It explores restaurant categories, customer voting patterns, ratings, online/offline ordering behavior, and approximate customer spending.
 
-The goal is to move from raw restaurant data to **actionable business insights** that could help understand customer preferences and restaurant performance.
+The project follows a practical analyst workflow: **understand → clean → analyze → visualize → answer business questions → communicate insights**.
 
 ## 🎯 Business Questions
 
-The analysis investigates questions such as:
-
-1. 🍴 What type of restaurant do the majority of customers order from?
-2. 🗳️ How many customer votes has each restaurant type received?
-3. ⭐ What ratings are most common among restaurants?
-4. 💰 What is the average spending per order for couples ordering food online?
-5. 📱 Which ordering mode — online or offline — receives higher ratings?
-6. 🏪 Which restaurant type receives more offline orders and could benefit from targeted offers?
-
-These questions are based on the project's original analysis requirements. fileciteturn7file0L2-L2
+1. 🍴 Which restaurant type has the largest presence in the dataset?
+2. 🗳️ Which restaurant type receives the most customer votes?
+3. ⭐ What rating range is most common?
+4. 💰 What is the average cost for two people?
+5. 📱 Which ordering mode has the higher average rating?
+6. 🏪 Which restaurant type has the strongest offline-order presence?
 
 ## 🧰 Tech Stack
 
@@ -51,16 +47,18 @@ These questions are based on the project's original analysis requirements. fi
 ```text
 Zomato-Data-Analysis/
 │
-├── 📓 zomato_data_analysis.ipynb       # Complete EDA notebook
-├── 📄 Zomato data .csv                 # Dataset
-├── 📝 Questions to solve.txt           # Business questions / project requirements
-├── 📑 zomato_data_analysis_code pdf.pdf # PDF version of the analysis code
-├── 📦 requirements.txt                 # Python dependencies
+├── 📓 zomato_data_analysis.ipynb             # Original analysis notebook
+├── 📓 notebooks/
+│   └── zomato_eda_professional.ipynb        # ⭐ Portfolio-ready EDA notebook
+├── 📄 Zomato data .csv                       # Dataset
+├── 📝 Questions to solve.txt                 # Original business questions
+├── 📑 zomato_data_analysis_code pdf.pdf     # PDF code reference
+├── 📦 requirements.txt                       # Python dependencies
 ├── 🚫 .gitignore
 └── 📖 README.md
 ```
 
-The repository currently contains the dataset, notebook, project questions, PDF code reference, and `.gitignore`; this README adds a clearer project presentation and navigation layer. fileciteturn3file0L2-L2
+> **Recommended:** Start with `notebooks/zomato_eda_professional.ipynb` for the cleaned, structured portfolio version. The original notebook is retained for project history.
 
 ## 🔎 Analysis Workflow
 
@@ -71,7 +69,7 @@ Data Loading
       ↓
 Data Understanding
       ↓
-Data Cleaning & Transformation
+Data Cleaning & Type Conversion
       ↓
 Exploratory Data Analysis
       ↓
@@ -79,12 +77,12 @@ Visualization
       ↓
 Business Questions
       ↓
-Insights & Conclusions
+Insights & Business Takeaways
 ```
 
 ## 📊 Dataset Snapshot
 
-The notebook works with **148 restaurant records and 7 columns**, covering information such as restaurant name, online ordering, table booking, rating, customer votes, approximate cost for two people, and restaurant type. fileciteturn5file0L2-L2
+The dataset contains **148 restaurant records and 7 columns**, including restaurant name, online ordering, table booking, rating, customer votes, approximate cost for two people, and restaurant type.
 
 ## 🚀 How to Run
 
@@ -95,7 +93,7 @@ git clone https://github.com/rutuu0228/Zomato-Data-Analysis.git
 cd Zomato-Data-Analysis
 ```
 
-### 2. Create a virtual environment (recommended)
+### 2. Create and activate a virtual environment
 
 ```bash
 python -m venv .venv
@@ -119,41 +117,57 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Open **`zomato_data_analysis.ipynb`** and run the notebook cells.
+Then open:
 
-## 💡 Key Skills Demonstrated
+```text
+notebooks/zomato_eda_professional.ipynb
+```
+
+## 🧹 Data Preparation
+
+The professional notebook includes reproducible preparation steps such as:
+
+- Standardizing column names
+- Converting restaurant ratings from text such as `4.1/5` into numeric values
+- Checking missing values
+- Checking duplicate rows
+- Keeping analysis logic reproducible instead of hard-coding results
+
+## 📈 What the Analysis Demonstrates
 
 - Data loading with Pandas
 - DataFrame inspection and understanding
 - Data cleaning and type conversion
 - Grouping and aggregation
-- Categorical data analysis
-- Customer behavior analysis
-- Rating analysis
-- Online vs. offline order comparison
-- Statistical visualization
-- Business-oriented interpretation of data
+- Categorical analysis
+- Customer engagement analysis using votes
+- Rating distribution analysis
+- Online vs. offline comparison
+- Restaurant-type comparison
+- Data visualization with Matplotlib and Seaborn
+- Business-oriented interpretation
 
-## 📈 Why This Project Matters
+## 💼 Portfolio Value
 
-This is an **EDA-focused portfolio project** demonstrating how a data analyst can take a raw business dataset, ask relevant questions, analyze patterns, visualize findings, and communicate insights.
+This project demonstrates the core workflow expected from an entry-level **Data Analyst / Data Science** candidate: starting with a raw dataset, identifying meaningful questions, cleaning the data, exploring patterns, visualizing evidence, and translating results into business takeaways.
 
-It is intentionally focused on the complete **data analysis workflow** rather than machine learning.
+It intentionally focuses on **EDA and analytics fundamentals**, rather than adding unnecessary machine learning.
 
 ## 🔗 Project Files
 
-- 📓 [Open the EDA Notebook](./zomato_data_analysis.ipynb)
-- 📊 [View the Dataset](./Zomato%20data%20.csv)
-- 📝 [View Analysis Questions](./Questions%20to%20solve.txt)
-- 📑 [View Code PDF](./zomato_data_analysis_code%20pdf.pdf)
+- ⭐ [Portfolio EDA Notebook](./notebooks/zomato_eda_professional.ipynb)
+- 📓 [Original Notebook](./zomato_data_analysis.ipynb)
+- 📊 [Dataset](./Zomato%20data%20.csv)
+- 📝 [Business Questions](./Questions%20to%20solve.txt)
+- 📑 [Code PDF](./zomato_data_analysis_code%20pdf.pdf)
 
 ## 👨‍💻 Author
 
 **Rutuu** — B.Sc. Data Science Student
 
-Interested in **Data Science, Data Analytics, Machine Learning, SQL, Python and AI**.
+Focused on **Data Science • Data Analytics • Python • SQL • Machine Learning • AI**.
 
-⭐ If you find this project useful, consider giving the repository a star!
+⭐ If you find this project useful, consider starring the repository!
 
 ---
 
